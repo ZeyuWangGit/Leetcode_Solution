@@ -3,3 +3,4 @@
 ## 1. Array
 
 [1] 26. Remove Duplicates from Sorted Array
+[2] 35. Search Insert Position
