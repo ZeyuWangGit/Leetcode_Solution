@@ -21,19 +21,25 @@ class Solution(object):
         if len(nums) == 0:
             return 0
         else:
-            max = nums[len(nums)-1]
-            min = nums[0]
-            length = 0
-            k = 0
-            for i in range(min,max+1):
-                if i in nums:
-                    length +=1
-                    nums[k] = i
-                    k += 1
-            nums = nums[:length]
-            return length
-
-
+            # max = nums[len(nums)-1]
+            # min = nums[0]
+            # length = 0∫
+            # k = 0
+            # for i in range(min,max+1):
+            #     if i in nums:
+            #         length +=1
+            #         nums[k] = i
+            #         k += 1
+            # nums = nums[:length]
+            j = 0
+            for i in range(1,len(nums)):
+                if nums[j]!=nums[i]:
+                    j +=1
+                    nums[j] = nums[i]
+            nums = nums[:j+1]
+            print(nums)
+            return j + 1
+             # return length
 x = Solution()
 x.removeDuplicates([1,1,2,3,5,5,6])
 print(x.removeDuplicates([1,1,2,3,5,5,6]))
